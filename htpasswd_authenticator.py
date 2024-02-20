@@ -3,8 +3,9 @@ A plugin for conan htpasswd authentication
 """
 
 import os
-from ConfigParser import ConfigParser
+from configparser import ConfigParser
 from passlib.apache import HtpasswdFile
+
 
 def get_class():
     """ plugin entry point """
