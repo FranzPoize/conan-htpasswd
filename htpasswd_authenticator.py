@@ -19,7 +19,7 @@ class HtpasswdAuthenticator(object):
     """
     def __init__(self):
         #try to locate the server config and load it
-        server_folder = os.path.join(os.path.expanduser("~"), '.conan_server')
+        server_folder = os.environ["CONAN_SERVER_HOME"]
         server_conf = os.path.join(server_folder, "server.conf")
         htpasswd_location = os.path.join(server_folder, "plugins", "authentication", ".htpasswd")
         if os.path.exists(server_conf):
